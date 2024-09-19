@@ -71,7 +71,7 @@ const Map = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch('http://localhost:5000/api/vehicle') // Fetch from the backend
+      fetch('https://vechilebackend-swb6.onrender.com/') // Fetch from the backend
         .then((response) => response.json())
         .then((data) => {
           const newPosition = [data.latitude, data.longitude];
@@ -85,7 +85,7 @@ const Map = () => {
 
   useEffect(() => {
     // Fetch locations data
-    fetch('http://localhost:5000/api/locations')
+    fetch('https://vechilebackend-swb6.onrender.com/')
       .then((response) => response.json())
       .then((data) => setLocations(data));
   }, []);
